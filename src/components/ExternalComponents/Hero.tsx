@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const Hero = () => {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 text-white pt-20">
+    <div className="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 text-white">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
         <div>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
@@ -12,12 +14,16 @@ const Hero = () => {
             o`z kelajagingizni bugundan yarating.
           </p>
           <div className="mt-6 flex gap-4">
+            <Link to={"/course"}>
             <button className="bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold hover:bg-blue-100 transition">
               Kurslarni ko`rish
             </button>
+            </Link>
+            <Link to={"/contact"}>
             <button className="border border-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition">
               Bog`lanish
             </button>
+            </Link>
           </div>
         </div>
         <div className="relative">
