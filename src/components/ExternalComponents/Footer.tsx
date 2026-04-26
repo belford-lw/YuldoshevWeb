@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div className="bg-blue-700 text-white pt-12 pb-6 mt-30">
@@ -11,10 +13,18 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold text-lg">Sahifalar</h3>
           <ul className="mt-3 space-y-2 text-white/80">
-            <li className="hover:text-white cursor-pointer">Bosh sahifa</li>
-            <li className="hover:text-white cursor-pointer">Kurslar</li>
-            <li className="hover:text-white cursor-pointer">Biz haqimizda</li>
-            <li className="hover:text-white cursor-pointer">Aloqa</li>
+            <Link to={"/"}>
+                <li className="hover:text-white cursor-pointer">Bosh sahifa</li>
+            </Link>
+            <Link to={"/course"}>
+                <li className="hover:text-white cursor-pointer">Kurslar</li>
+            </Link>
+            <Link to={"/about"}>
+                <li className="hover:text-white cursor-pointer">Biz haqimizda</li>
+            </Link>
+            <Link to={"contact"}>
+                <li className="hover:text-white cursor-pointer">Aloqa</li>
+            </Link>
           </ul>
         </div>
         <div>
@@ -22,8 +32,8 @@ const Footer = () => {
           <ul className="mt-3 space-y-2 text-white/80">
             <li>Frontend</li>
             <li>Backend</li>
-            <li>Grafik dizayn</li>
-            <li>Ingliz tili</li>
+            <li>AI (Suniy Intellekt)</li>
+            <li>Kampyuter Savodxonligi</li>
           </ul>
         </div>
         <div>
